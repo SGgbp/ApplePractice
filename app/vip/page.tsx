@@ -1,0 +1,5 @@
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { BookingForm } from "@/components/BookingForm";
+import { VIPPackageCard } from "@/components/VIPPackageCard";
+import { vipPackages } from "@/data/vipPackages";
+export default function VIPPage(){return <main className="px-4 pb-20 pt-28 text-white sm:px-6 lg:px-8"><AnimatedSection className="mx-auto max-w-7xl"><p className="font-bold uppercase tracking-[.35em] text-gold">VIP booking</p><h1 className="mt-4 max-w-4xl text-5xl font-black sm:text-7xl">Private booths, bottle service and queue-jump arrival.</h1><div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">{vipPackages.map(p=><VIPPackageCard key={p.name} pkg={p}/>)}</div><div className="mt-14 grid gap-8 lg:grid-cols-[.8fr_1.2fr]"><div><h2 className="text-3xl font-black">Request a table</h2><p className="mt-4 text-white/65">Connect this form to Formspree, Resend or your CRM when ready. For now it captures the exact fields needed for VIP enquiries.</p></div><BookingForm /></div></AnimatedSection></main>}

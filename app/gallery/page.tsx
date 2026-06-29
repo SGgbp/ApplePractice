@@ -1,0 +1,3 @@
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { GalleryGrid } from "@/components/GalleryGrid";
+export default function GalleryPage(){return <main className="px-4 pb-20 pt-28 text-white sm:px-6 lg:px-8"><AnimatedSection className="mx-auto max-w-7xl"><p className="font-bold uppercase tracking-[.35em] text-fuchsia-300">Gallery</p><h1 className="mt-4 text-5xl font-black sm:text-7xl">Club nights in motion.</h1><p className="mt-5 max-w-3xl text-white/65">A responsive gallery for club nights, interiors, DJs and VIP tables with hover motion and a lightweight lightbox preview.</p><div className="mt-10"><GalleryGrid /></div></AnimatedSection></main>}

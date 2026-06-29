@@ -2,48 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
-  background: #f5f5f7;
-  color: #171717;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  margin: 0;
-  background:
-    radial-gradient(circle at 18% 12%, rgba(117, 190, 255, 0.24), transparent 28rem),
-    radial-gradient(circle at 86% 18%, rgba(255, 214, 150, 0.3), transparent 24rem),
-    linear-gradient(180deg, #fbfbfd 0%, #f5f5f7 52%, #eeeeef 100%);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-}
-
-::selection {
-  background: #191919;
-  color: #ffffff;
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  box-shadow: 0 20px 80px rgba(30, 40, 60, 0.08);
-  backdrop-filter: blur(24px);
-}
-
-.device-shine {
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(226, 232, 240, 0.34) 36%, rgba(15, 23, 42, 0.05)),
-    radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.95), transparent 12rem);
-}
-
-.noise {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
-}
+:root { color-scheme: dark; background: #030108; color: #ffffff; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { min-height: 100vh; margin: 0; background: radial-gradient(circle at 15% 10%, rgba(168,85,247,.22), transparent 28rem), radial-gradient(circle at 88% 18%, rgba(34,211,238,.16), transparent 26rem), linear-gradient(180deg,#05020a 0%,#090411 52%,#020104 100%); font-family: var(--font-geist-sans), Inter, system-ui, sans-serif; }
+::selection { background: #d946ef; color: #fff; }
+.noise { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E"); }

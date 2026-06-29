@@ -1,0 +1,6 @@
+"use client";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+const links = [["Home","/"],["Events","/events"],["VIP","/vip"],["Gallery","/gallery"],["Music","/music"],["About","/about"],["Contact","/contact"]];
+export function Navbar(){const [open,setOpen]=useState(false);return <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#05020a]/70 backdrop-blur-2xl"><nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"><Link href="/" className="text-lg font-black tracking-[0.24em] text-white">NOCTURNE<span className="text-fuchsia-400">.</span></Link><div className="hidden items-center gap-7 md:flex">{links.map(([l,h])=><Link key={l} href={h} className="text-sm font-semibold text-white/70 transition hover:text-white">{l}</Link>)}<Link href="/vip" className="rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-400 px-5 py-2 text-sm font-bold text-white shadow-neon">Book a Table</Link></div><button onClick={()=>setOpen(!open)} className="md:hidden text-white">{open?<X/>:<Menu/>}</button></nav>{open&&<div className="border-t border-white/10 bg-black/95 px-4 py-4 md:hidden">{links.map(([l,h])=><Link onClick={()=>setOpen(false)} key={l} href={h} className="block rounded-2xl px-4 py-3 text-white/80 hover:bg-white/10">{l}</Link>)}</div>}</header>}
