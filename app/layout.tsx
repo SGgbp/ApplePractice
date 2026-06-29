@@ -1,19 +1,13 @@
 import type { Metadata } from "next";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Luma One | ApplePractice",
-  description: "A polished Next.js practice site using Tailwind CSS, Framer Motion, and public APIs.",
+  title: "Nocturne Nottingham | Premier Nightlife & VIP Tables",
+  description: "A premium Nottingham nightclub website for events, VIP table bookings, music, gallery and contact enquiries.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body><Navbar />{children}<Footer /></body></html>;
 }
